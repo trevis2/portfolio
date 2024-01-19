@@ -5,6 +5,9 @@ function App() {
   return (
     <>
       <h1>Benvenuto sul sito di Simone Trevisan!</h1>
+      <h2>Il sito è in fase di costruzione..</h2>
+
+      <h2>Grazie e a presto per aggiornamenti</h2>
     </>
   );
 }
