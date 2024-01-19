@@ -1,13 +1,15 @@
 import './App.css';
+import Body from './components/Body';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
   return (
-    <>
-      <h1>Benvenuto sul sito di Simone Trevisan!</h1>
-      <h2>Il sito è in fase di costruzione..</h2>
-
-      <h2>Grazie e a presto per aggiornamenti</h2>
-    </>
+    <div className='app'>
+      <Header></Header>
+      <Body></Body>
+      <Footer></Footer>
+    </div>
   );
 }
 
