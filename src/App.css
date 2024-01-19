@@ -9,8 +9,8 @@
 .header {
   width: auto;
   background-color: #143447;
-  margin: 10px;
-  border-radius: 15px;
+  margin: 0 8px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -48,13 +48,20 @@
 }
 
 .body {
-  margin: 10px;
+  margin: 8px;
+  border-radius: 8px;
   height: 75%;
-  border-radius: 15px;
   width: auto;
   background-color: #143447;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+
+.footer {
+  margin: 8px;
+  height: 5%;
+  border-radius: 8px;
+  background-color: #143447;
 }
