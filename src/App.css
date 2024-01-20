@@ -1,43 +1,47 @@
 .app {
   height: 100vh;
-  width: 100%;
-  background-color: white;
+  width: auto;
+  background-color: #476f86;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
+/* #2f4855 */
+/* #bdccd4 */
+/* #6c8795 */
 
+/* #476f86 */
+/* #143447 */
 .header {
-  width: auto;
-  height: 10%;
-  flex: 1;
+  flex: 3;
   background-color: #143447;
-  margin: 0 8px;
+  margin-bottom: 8px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  box-shadow: 3px 3px 10px #2f4855;
 }
 
 .body {
-  margin: 8px;
+  flex: 10;
+  margin-bottom: 8px; 
   border-radius: 8px;
-  flex: 1;
-  width: auto;
-  min-height: 50%;
   background-color: #143447;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  box-shadow: 3px 3px 10px #2f4855;
 }
 
 .footer {
-  width: auto;
-  min-height: 3%;
-  margin: 8px;
   flex: 1;
   border-radius: 8px;
   background-color: #143447;
+  box-shadow: 3px 3px 10px #2f4855;
 }
 
 .header_navbar {
