@@ -6,6 +6,7 @@ import { FcVlc } from "react-icons/fc";
 
 function App() {
   const wip = process.env.REACT_APP_WORK_IN_PROGRESS;
+  console.log(process.env.NODE_ENV);
   return (
     <div className='app'>
       {
