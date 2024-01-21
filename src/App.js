@@ -10,12 +10,7 @@ function App() {
     if (process.env.NODE_ENV === 'development') {
       return false;
     } else if (process.env.NODE_ENV === 'production') {
-      if (process.env.REACT_APP_WORK_IN_PROGRESS === true) {
-        return true;
-      }
-      else {
-        return false;
-      }
+      return process.env.REACT_APP_WORK_IN_PROGRESS;
     }
     else {
       return true;
