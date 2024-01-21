@@ -3,14 +3,27 @@ import { Navbar } from './components';
 import { Header, About, Skills, Testimonials, Work, Footer } from './features';
 import { FcVlc } from "react-icons/fc";
 
-
 function App() {
-  const wip = process.env.REACT_APP_WORK_IN_PROGRESS;
-  console.log(process.env.NODE_ENV);
+
+  function isSiteUnderContruction() {
+
+    if (process.env.NODE_ENV === 'development')
+      return false;
+
+    if (process.env.NODE_ENV === 'production') {
+      if (process.env.REACT_APP_WORK_IN_PROGRESS === true) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+  }
+  const workInProgress = isSiteUnderContruction();
   return (
     <div className='app'>
       {
-        !wip &&
+        !workInProgress &&
         <>
           <Navbar />
           <Header />
@@ -22,7 +35,7 @@ function App() {
         </>
       }
       {
-        wip && <div>
+        workInProgress && <div>
           <div>
             <FcVlc size={30} />
             <FcVlc size={30} />
