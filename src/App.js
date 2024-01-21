@@ -7,10 +7,9 @@ function App() {
 
   function isSiteUnderContruction() {
 
-    if (process.env.NODE_ENV === 'development')
+    if (process.env.NODE_ENV === 'development') {
       return false;
-
-    if (process.env.NODE_ENV === 'production') {
+    } else if (process.env.NODE_ENV === 'production') {
       if (process.env.REACT_APP_WORK_IN_PROGRESS === true) {
         return true;
       }
@@ -18,8 +17,15 @@ function App() {
         return false;
       }
     }
+    else {
+      return true;
+    }
   }
   const workInProgress = isSiteUnderContruction();
+  console.log("wip", workInProgress)
+  console.log(process.env.NODE_ENV)
+  console.log(process.env.REACT_APP_WORK_IN_PROGRESS)
+
   return (
     <div className='app'>
       {
