@@ -84,7 +84,6 @@
     height: 35px;
     border-radius: 50%;
     position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,6 +137,7 @@
                 transition: all 0.2s ease-in;
                 margin: 10px;
                 padding: 10px;
+
                 &:hover {
                     background-color: var(--light05-gray-blue-color);
                 }
@@ -148,7 +148,7 @@
                     font-size: 1rem;
                     text-transform: uppercase;
                     font-weight: 500;
-                    
+
                 }
             }
         }
