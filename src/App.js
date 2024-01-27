@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Navbar } from './components';
 import { Header, About, Skills, Testimonials, Work, Footer } from './features';
 import { FcVlc } from "react-icons/fc";
