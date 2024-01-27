@@ -35,7 +35,7 @@ function App() {
           <Footer />
         </>
       }
-      {
+      {/* {
         workInProgress && <div>
           <div>
             <FcVlc size={30} />
@@ -56,7 +56,7 @@ function App() {
           <h4>Bye!</h4>
 
         </div>
-      }
+      } */}
     </div>
   )
 }
