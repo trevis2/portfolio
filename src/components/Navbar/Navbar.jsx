@@ -22,17 +22,18 @@ const Navbar = () => {
             <div className='app__navbar-menu'>
                 <HiMenuAlt4 onClick={() => setToggleMenu(true)} />
                 {toggleMenu &&
-                    <motion.div whileInView={{ x: [300, 0] }} transition={{ duration: 0.35, ease: 'easeInOut' }}>
-                        <HiX onClick={() => setToggleMenu(false)} />
-                        <motion.ul>
-                            {['home', 'about', 'work', 'skills', 'contact'].map((element) => (
-                                <li key={element}>
-                                    <div />
-                                    <a href={`#${element}`} onClick={() => setToggleMenu(false)}>{element}</a>
-                                </li>
-                            ))}
-                        </motion.ul>
-                    </motion.div>
+                    <>
+                        <motion.div whileInView={{ x: [300, 0] }} transition={{ duration: 0.55, ease: 'easeInOut' }}>
+                            <HiX onClick={() => setToggleMenu(false)} />
+                            <motion.ul>
+                                {['home', 'about', 'work', 'skills', 'contact'].map((element) => (
+                                    <motion.li key={element}>
+                                        <a href={`#${element}`} onClick={() => setToggleMenu(false)}>{element}</a>
+                                    </motion.li>
+                                ))}
+                            </motion.ul>
+                        </motion.div>
+                    </>
                 }
             </div>
         </nav>
