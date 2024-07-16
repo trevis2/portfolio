@@ -1,46 +1,58 @@
 import React, { useState } from 'react';
 import './Navbar.scss';
-import { images } from '../../constants';
+import { images, sections } from '../../constants';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(false);
+
+    const handleLinkClick = (sectionId) => {
+        setToggleMenu(false);
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const yOffset = -80; // Adjust this value based on your navbar height
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
     return (
         <nav className='app__navbar'>
             <div className='app__navbar-logo'>
-                <img src={images.logonobg} alt="logo"></img>
+                <img src={images.logonobg} alt="logo" />
             </div>
             <ul className='app__navbar-links'>
-                {['home', 'about', 'work', 'skills', 'contact'].map((element) => (
-                    <li className='app__flex p-text' key={`link-${element}`}>
+                {sections.map((section) => (
+                    <li className='app__flex p-text' key={`link-${section.id}`}>
                         <div />
-                        <a href={`#${element}`}>{element}</a>
+                        <a href={`#${section.id}`} onClick={() => handleLinkClick(section.id)}>{section.navbarTitle}</a>
                     </li>
                 ))}
             </ul>
             <div className='app__navbar-menu'>
                 <HiMenuAlt4 onClick={() => setToggleMenu(true)} />
-                {toggleMenu &&
-                    <>
-                        <motion.div key={`first-div-${1}`}
-                            initial={{ x: 250, y: 0 }}
-                            animate={{ x: 0, y: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeOut' }}>
-                            <HiX onClick={() => setToggleMenu(false)} />
-                            <motion.ul key={`first-ul-${1}`}>
-                                {['home', 'about', 'work', 'skills', 'contact'].map((element) => (
-                                    <motion.li key={element}>
-                                        <a href={`#${element}`} onClick={() => setToggleMenu(false)}>{element}</a>
-                                    </motion.li>
-                                ))}
-                            </motion.ul>
-                        </motion.div>
-                    </>
-                }
+                {toggleMenu && (
+                    <motion.div
+                        initial={{ x: 300 }}
+                        animate={{ x: 0 }}
+                        transition={{ duration: 0.85, ease: 'easeOut' }}
+                    >
+                        <HiX onClick={() => setToggleMenu(false)} />
+                        <ul>
+                            {sections.map((section) => (
+                                <motion.li key={section.id}>
+                                    <a href={`#${section.id}`} onClick={() => handleLinkClick(section.id)}>
+                                        {section.title}
+                                    </a>
+                                </motion.li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
             </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

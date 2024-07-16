@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import { Navbar } from './components';
-import { Header, About, Skills, Testimonials, Work, Footer } from './features';
+import { Home, About, Skills, Ratings, Portfolio, Footer } from './features';
 import { WorkInProgressPage } from './pages';
+import Companies from './features/Companies/Companies';
 
 function App() {
   const [isWorkInProgress, setIsWorkInProgress] = useState(true);
@@ -31,11 +32,12 @@ function App() {
   return (
     <div className='app'>
       <Navbar />
-      <Header />
+      <Home />
       <About />
       <Skills />
-      <Testimonials />
-      <Work />
+      <Portfolio />
+      <Ratings />
+      <Companies />
       <Footer />
     </div>
   );

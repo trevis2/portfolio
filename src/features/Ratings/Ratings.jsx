@@ -1,7 +1,8 @@
 import React from 'react';
-import './Testimonials.scss';
+import './Ratings.scss';
+import { sections } from '../../constants';
 
-const Testimonials = () => {
+const Ratings = () => {
   const testimonials = [
     {
       name: "Marco Rossi",
@@ -21,8 +22,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="app__testimonials">
-      <h2>Cosa Dicono i Clienti</h2>
+    <section id="ratings" className="app__testimonials">
+      <h2>{sections.find(section => section.id === 'ratings').sectionTitle}</h2>
       <div className="app__testimonials-container">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="app__testimonial-item">
@@ -38,4 +39,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Ratings;

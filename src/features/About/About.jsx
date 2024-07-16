@@ -3,7 +3,7 @@ import './About.scss';
 
 const About = () => {
     return (
-        <section id="about" className="about">
+        <section id="about-me" className="about">
             <div className="about-content">
                 <h2>Chi Sono</h2>
                 <div className="about-grid">
@@ -23,7 +23,7 @@ const About = () => {
                             <li>Implementazione di architetture cloud-native</li>
                         </ul>
                         <p>
-                            Sono sempre alla ricerca di nuove sfide e opportunità per ampliare le mie competenze, 
+                            Sono sempre alla ricerca di nuove sfide e opportunità per ampliare le mie competenze,
                             contribuendo a progetti innovativi che possano fare la differenza nel mondo digitale.
                         </p>
                     </div>
