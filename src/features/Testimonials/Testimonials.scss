@@ -1,0 +1,61 @@
+.app__testimonials {
+    padding: 4rem 2rem;
+    background-color: var(--light-gray-blue-color);
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--dark-gray-blue-color);
+    }
+  
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    &-item {
+      background-color: var(--white-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 350px;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  
+    &-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: var(--gray-blue-color);
+    }
+  
+    &-author {
+      h4 {
+        margin-bottom: 0.25rem;
+        color: var(--secondary-color);
+      }
+  
+      p {
+        font-size: 0.9rem;
+        color: var(--gray-blue-color);
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      padding: 2rem 1rem;
+  
+      &-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      &-item {
+        width: 100%;
+      }
+    }
+  }
