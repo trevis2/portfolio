@@ -6,20 +6,29 @@ import { SiUnrealengine, SiUnity } from 'react-icons/si';
 
 const Portfolio = () => {
     const projects = [
+
         {
             title: "Unreal Platform Game",
             description: "Un platformer 3D completo in Unreal Engine con movimento custom, AI con NavMesh, boss fight, gestione risorse, power-up e aree sbloccabili. Sfida: sconfiggi tutti i nemici raccogliendo il massimo delle risorse nel minor tempo!",
             technologies: ["UE5", "C++", "AI NavMesh", "Resource Systems", "FSM", "Animations"],
             engine: "unreal",
             github: "https://github.com/yourusername/unreal-platformer",
-            demo: "https://yourusername.itch.io/platformer"
+            demo: ""
         },
         {
             title: "BB8 Physics Simulation",
             description: "Character controller basato sulla fisica che simula la meccanica del droide BB8 in Unreal Engine. Sistema di rotolamento sferico con velocità angolare, stabilizzazione giroscopica della testa e componente movimento custom per locomozione realistica.",
             technologies: ["UE5", "C++", "Physics 3D", "Applied Forces", "Character Movement"],
             engine: "unreal",
-            github: "https://github.com/yourusername/bb8-physics"
+            github: "https://github.com/yourusername/bb8-physics",
+            demo: ""
+        },
+        {
+            title: "Physics-Based Networking Simulation",
+            description: "Implementazione client-server di una simulazione fisica in Unity utilizzando Photon PUN. La scena è basata sui tutorial di Gaffer on Games. Features: client-side prediction, server reconciliation, snapshot interpolation e lag compensation per garantire sincronizzazione precisa delle entità fisiche tra i client.",
+            technologies: ["Unity", "C#", "Photon PUN", "Physics Simulation", "Networking"],
+            engine: "unity",
+            github: "https://github.com/yourusername/networking-physics"
         },
         {
             title: "Pang Clone",
@@ -27,14 +36,15 @@ const Portfolio = () => {
             technologies: ["Unity", "C#", "2D Physics", "Mobile Dev", "Touch Input"],
             engine: "unity",
             github: "https://github.com/yourusername/pang-clone",
-            demo: "https://play.google.com/store/apps/details?id=your.pang.clone"
+            demo: ""
         },
         {
             title: "Arkanoid Clone",
             description: "Implementazione del classico arcade in DirectX seguendo i tutorial di Rastertek. Features: rendering sprite 2D, sistema collision detection, movimento entità e gestione degli stati di gioco.",
             technologies: ["C++", "DirectX 11", "2D Graphics", "Sprite Rendering", "Collision"],
             engine: "directx",
-            github: "https://github.com/yourusername/arkanoid-clone"
+            github: "https://github.com/yourusername/arkanoid-clone",
+            demo: ""
         },
         {
             title: "FMod Wrapper Library",
