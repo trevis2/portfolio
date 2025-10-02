@@ -43,7 +43,7 @@ const Navbar = () => {
                             {sections.map((section) => (
                                 <motion.li key={section.id}>
                                     <a href={`#${section.id}`} onClick={() => handleLinkClick(section.id)}>
-                                        {section.title}
+                                        {section.navbarTitle}
                                     </a>
                                 </motion.li>
                             ))}
