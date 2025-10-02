@@ -20,13 +20,13 @@ const Footer = () => {
         </div>
         
         <div className="app__footer-social">
-          <a href="https://www.linkedin.com/in/simone-trevisan-gamedev" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/simone-t-99ab2265/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <a href="https://github.com/KratosDevT" target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub />
           </a>
-          <a href="https://yourusername.itch.io" target="_blank" rel="noopener noreferrer" title="Itch.io">
+          <a href="https://kratosdevt.itch.io/" target="_blank" rel="noopener noreferrer" title="Itch.io">
             <FaItchIo />
           </a>
           <a href="mailto:simone.trevisan.gamedev@gmail.com" title="Email">

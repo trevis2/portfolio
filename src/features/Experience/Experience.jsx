@@ -33,7 +33,7 @@ const Experience = () => {
         {
             year: "2012 - 2018",
             title: "Private Teacher for University Students",
-            description: "Insegnamento di materie ingegneristiche a studenti universitari"
+            description: "Insegnamento e preparazione esami di materie ingegneristiche (Analisi, Fisica, Elettronica, Elettrotecnica) a studenti universitari di ingegneria"
         }
     ];
 
@@ -57,57 +57,61 @@ const Experience = () => {
 
     return (
         <section id="experience" className="experience">
-            <h2>Percorso Professionale</h2>
-            
-            <div className="experience-section">
-                <div className="section-header">
-                    <FaGraduationCap className="section-icon" />
-                    <h3>Formazione Accademica</h3>
-                </div>
-                <div className="timeline">
-                    {education.map((item, index) => (
-                        <div key={index} className="timeline-item">
-                            <div className="timeline-year">{item.year}</div>
-                            <div className="timeline-content">
-                                <h4>{item.title}</h4>
-                                <p>{item.institution}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <div className="experience-content">
 
-            <div className="experience-section">
-                <div className="section-header">
-                    <FaBriefcase className="section-icon" />
-                    <h3>Esperienza Lavorativa</h3>
+                <p className="experience-title" >Percorso Professionale</p>
+                <p className="experience-subtitle">Il mio percorso educativo e professionale</p>
+                
+                <div className="experience-section">
+                    <div className="section-header">
+                        <FaGraduationCap className="section-icon" />
+                        <h3>Formazione Accademica</h3>
+                    </div>
+                    <div className="timeline">
+                        {education.map((item, index) => (
+                            <div key={index} className="timeline-item">
+                                <div className="timeline-year">{item.year}</div>
+                                <div className="timeline-content">
+                                    <h4>{item.title}</h4>
+                                    <p>{item.institution}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <div className="timeline">
-                    {work.map((item, index) => (
-                        <div key={index} className="timeline-item">
-                            <div className="timeline-year">{item.year}</div>
-                            <div className="timeline-content">
+
+                <div className="experience-section">
+                    <div className="section-header">
+                        <FaBriefcase className="section-icon" />
+                        <h3>Esperienza Lavorativa</h3>
+                    </div>
+                    <div className="timeline">
+                        {work.map((item, index) => (
+                            <div key={index} className="timeline-item">
+                                <div className="timeline-year">{item.year}</div>
+                                <div className="timeline-content">
+                                    <h4>{item.title}</h4>
+                                    <p>{item.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="experience-section">
+                    <div className="section-header">
+                        <FaTrophy className="section-icon" />
+                        <h3>Riconoscimenti</h3>
+                    </div>
+                    <div className="achievements-grid">
+                        {achievements.map((item, index) => (
+                            <div key={index} className="achievement-card">
+                                <div className="achievement-year">{item.year}</div>
                                 <h4>{item.title}</h4>
                                 <p>{item.description}</p>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            <div className="experience-section">
-                <div className="section-header">
-                    <FaTrophy className="section-icon" />
-                    <h3>Riconoscimenti</h3>
-                </div>
-                <div className="achievements-grid">
-                    {achievements.map((item, index) => (
-                        <div key={index} className="achievement-card">
-                            <div className="achievement-year">{item.year}</div>
-                            <h4>{item.title}</h4>
-                            <p>{item.description}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

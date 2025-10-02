@@ -1,14 +1,28 @@
 .experience {
     padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #f8f9fa;
+    background-color: #e5f3fc;
 
-    h2 {
-        font-size: 2.5em;
-        margin-bottom: 60px;
+    .experience-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .experience-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            color: var(--primary-color);
+            text-decoration: underline;
+            font-weight: bold;
+    }
+
+    .experience-subtitle {
         text-align: center;
-        color: var(--primary-color);
+        max-width: 600px;
+        margin: 0 auto 50px;
+        color: #666;
+        font-size: 1.1em;
     }
 
     .experience-section {
@@ -19,6 +33,7 @@
             align-items: center;
             margin-bottom: 30px;
 
+
             .section-icon {
                 font-size: 2em;
                 color: var(--secondary-color);
@@ -27,13 +42,14 @@
 
             h3 {
                 font-size: 1.8em;
-                color: var(--primary-color);
+                color: var(--gray-blue-color);
             }
         }
 
         .timeline {
             position: relative;
             padding-left: 50px;
+
 
             &::before {
                 content: '';
@@ -54,8 +70,7 @@
                 &::before {
                     content: '';
                     position: absolute;
-                    left: -36px;
-                    top: 5px;
+                    left: -38px;
                     width: 12px;
                     height: 12px;
                     border-radius: 50%;
@@ -72,10 +87,10 @@
 
                 .timeline-content {
                     flex: 1;
+                    margin-left: 30px;
 
                     h4 {
                         font-size: 1.3em;
-                        margin-bottom: 5px;
                         color: var(--primary-color);
                     }
 
