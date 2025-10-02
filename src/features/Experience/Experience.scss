@@ -1,0 +1,153 @@
+.experience {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 60px;
+        text-align: center;
+        color: var(--primary-color);
+    }
+
+    .experience-section {
+        margin-bottom: 60px;
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .section-icon {
+                font-size: 2em;
+                color: var(--secondary-color);
+                margin-right: 15px;
+            }
+
+            h3 {
+                font-size: 1.8em;
+                color: var(--primary-color);
+            }
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 20px;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: var(--secondary-color);
+            }
+
+            .timeline-item {
+                position: relative;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: flex-start;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -36px;
+                    top: 5px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: var(--secondary-color);
+                    border: 3px solid #f8f9fa;
+                }
+
+                .timeline-year {
+                    font-weight: bold;
+                    color: var(--secondary-color);
+                    min-width: 100px;
+                    font-size: 1.1em;
+                }
+
+                .timeline-content {
+                    flex: 1;
+
+                    h4 {
+                        font-size: 1.3em;
+                        margin-bottom: 5px;
+                        color: var(--primary-color);
+                    }
+
+                    p {
+                        color: #666;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+
+            .achievement-card {
+                background: white;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                .achievement-year {
+                    font-weight: bold;
+                    color: var(--secondary-color);
+                    font-size: 1.1em;
+                    margin-bottom: 10px;
+                }
+
+                h4 {
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                    color: var(--primary-color);
+                }
+
+                p {
+                    color: #666;
+                    line-height: 1.5;
+                    font-size: 0.95em;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 15px;
+
+        h2 {
+            font-size: 2em;
+        }
+
+        .experience-section {
+            .timeline {
+                padding-left: 30px;
+
+                .timeline-item {
+                    flex-direction: column;
+
+                    .timeline-year {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

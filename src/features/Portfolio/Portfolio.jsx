@@ -1,40 +1,77 @@
 import React from 'react';
 import './Portfolio.scss';
 import { sections } from '../../constants';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaGamepad } from 'react-icons/fa';
+import { SiUnrealengine, SiUnity } from 'react-icons/si';
 
 const Portfolio = () => {
     const projects = [
         {
-            title: "E-commerce Platform",
-            description: "Piattaforma di e-commerce full-stack con pannello di amministrazione, gestione inventario e integrazione pagamenti.",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-            github: "https://github.com/yourusername/ecommerce-platform",
-            live: "https://your-ecommerce-platform.com"
+            title: "Unreal Platform Game",
+            description: "Un platformer 3D completo in Unreal Engine con movimento custom, AI con NavMesh, boss fight, gestione risorse, power-up e aree sbloccabili. Sfida: sconfiggi tutti i nemici raccogliendo il massimo delle risorse nel minor tempo!",
+            technologies: ["UE5", "C++", "AI NavMesh", "Resource Systems", "FSM", "Animations"],
+            engine: "unreal",
+            github: "https://github.com/yourusername/unreal-platformer",
+            demo: "https://yourusername.itch.io/platformer"
         },
         {
-            title: "Task Management App",
-            description: "Applicazione di gestione attività con funzionalità di collaborazione in tempo reale e notifiche push.",
-            technologies: ["React", "Firebase", "Material-UI"],
-            github: "https://github.com/yourusername/task-management-app",
-            live: "https://your-task-app.com"
+            title: "BB8 Physics Simulation",
+            description: "Character controller basato sulla fisica che simula la meccanica del droide BB8 in Unreal Engine. Sistema di rotolamento sferico con velocità angolare, stabilizzazione giroscopica della testa e componente movimento custom per locomozione realistica.",
+            technologies: ["UE5", "C++", "Physics 3D", "Applied Forces", "Character Movement"],
+            engine: "unreal",
+            github: "https://github.com/yourusername/bb8-physics"
         },
         {
-            title: "Portfolio Personale",
-            description: "Sito web portfolio responsive con animazioni fluide e ottimizzazione SEO.",
-            technologies: ["React", "GSAP", "Next.js"],
-            github: "https://github.com/yourusername/personal-portfolio",
-            live: "https://your-portfolio.com"
+            title: "Pang Clone",
+            description: "Ricreazione single-level del classico arcade in Unity 2D per Android. Sistema di split dinamico dei palloncini con simulazione fisica, controlli touch responsive, animazioni e UI dinamica.",
+            technologies: ["Unity", "C#", "2D Physics", "Mobile Dev", "Touch Input"],
+            engine: "unity",
+            github: "https://github.com/yourusername/pang-clone",
+            demo: "https://play.google.com/store/apps/details?id=your.pang.clone"
+        },
+        {
+            title: "Arkanoid Clone",
+            description: "Implementazione del classico arcade in DirectX seguendo i tutorial di Rastertek. Features: rendering sprite 2D, sistema collision detection, movimento entità e gestione degli stati di gioco.",
+            technologies: ["C++", "DirectX 11", "2D Graphics", "Sprite Rendering", "Collision"],
+            engine: "directx",
+            github: "https://github.com/yourusername/arkanoid-clone"
+        },
+        {
+            title: "FMod Wrapper Library",
+            description: "Libreria wrapper C++ per FMOD API, con sistema di riproduzione audio multi-canale e interfaccia di controllo runtime.",
+            technologies: ["C++", "FMOD API", "Audio Programming", "Resource Management"],
+            engine: "library",
+            github: "https://github.com/yourusername/fmod-wrapper"
+        },
+        {
+            title: "Memory Manager",
+            description: "Memory manager che implementa il pattern Small Object Allocator di Alexandrescu con override globale di new/delete.",
+            technologies: ["C++", "Memory Management", "Operator Overloading", "Performance"],
+            engine: "library",
+            github: "https://github.com/yourusername/memory-manager"
         }
     ];
+
+    const getEngineIcon = (engine) => {
+        switch(engine) {
+            case 'unreal': return <SiUnrealengine />;
+            case 'unity': return <SiUnity />;
+            default: return <FaGamepad />;
+        }
+    };
 
     return (
         <section id="portfolio" className="portfolio">
             <h2>{sections.find(section => section.id === 'portfolio').sectionTitle}</h2>
+            <p className="portfolio-subtitle">I miei progetti personali di Game Development</p>
+            
             <div className="projects-grid">
                 {projects.map((project, index) => (
                     <div key={index} className="project-card">
-                        <h3>{project.title}</h3>
+                        <div className="project-header">
+                            <h3>{project.title}</h3>
+                            <span className="engine-icon">{getEngineIcon(project.engine)}</span>
+                        </div>
                         <p>{project.description}</p>
                         <div className="technologies">
                             {project.technologies.map((tech, i) => (
@@ -45,9 +82,11 @@ const Portfolio = () => {
                             <a href={project.github} target="_blank" rel="noopener noreferrer">
                                 <FaGithub /> GitHub
                             </a>
-                            <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                <FaExternalLinkAlt /> Live Demo
-                            </a>
+                            {project.demo && (
+                                <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                                    <FaGamepad /> Demo
+                                </a>
+                            )}
                         </div>
                     </div>
                 ))}

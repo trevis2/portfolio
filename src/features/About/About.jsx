@@ -9,36 +9,37 @@ const About = () => {
                 <div className="about-grid">
                     <div className="about-text">
                         <p>
-                            Sono uno sviluppatore web full-stack con 5 anni di esperienza nella creazione di applicazioni
-                            web scalabili e intuitive. La mia passione per il codice e l'innovazione mi spinge a rimanere
-                            sempre aggiornato sulle ultime tecnologie e best practices del settore.
+                            Sono un Game Programmer con un solido background in Software Engineering (2018-2025) 
+                            e attualmente sto completando il Master in Computer Game Development all'Università di Verona.
                         </p>
                         <p>
-                            Specializzato in tecnologie JavaScript moderne, il mio approccio allo sviluppo si concentra su:
+                            La mia specializzazione è il Gameplay Development, con particolare focus su:
                         </p>
                         <ul>
-                            <li>Creazione di interfacce utente reattive e performanti</li>
-                            <li>Sviluppo di API robuste e scalabili</li>
-                            <li>Ottimizzazione delle performance e sicurezza delle applicazioni</li>
-                            <li>Implementazione di architetture cloud-native</li>
+                            <li>Sviluppo di meccaniche di gioco in C++ e Unreal Engine</li>
+                            <li>Programmazione di sistemi AI e fisica applicata</li>
+                            <li>Implementazione di pattern di programmazione e architetture ECS</li>
+                            <li>Ottimizzazione delle performance e gestione della memoria</li>
                         </ul>
                         <p>
-                            Sono sempre alla ricerca di nuove sfide e opportunità per ampliare le mie competenze,
-                            contribuendo a progetti innovativi che possano fare la differenza nel mondo digitale.
+                            Il mio approccio ai problemi è analitico e orientato alla qualità del codice. 
+                            Sono spinto dalla curiosità e dall'apprendimento continuo, dal perfezionamento 
+                            delle meccaniche di gioco alla costruzione di strumenti potenti per migliorare 
+                            il ciclo di sviluppo.
                         </p>
                     </div>
                     <div className="about-stats">
                         <div className="stat-item">
-                            <span className="stat-number">5+</span>
-                            <span className="stat-label">Anni di Esperienza</span>
+                            <span className="stat-number">7+</span>
+                            <span className="stat-label">Anni di Programmazione</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-number">50+</span>
-                            <span className="stat-label">Progetti Completati</span>
+                            <span className="stat-number">6+</span>
+                            <span className="stat-label">Progetti GameDev</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-number">10+</span>
-                            <span className="stat-label">Tecnologie Padrone</span>
+                            <span className="stat-number">2</span>
+                            <span className="stat-label">Game Engines</span>
                         </div>
                     </div>
                 </div>

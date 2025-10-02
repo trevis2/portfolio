@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaItchIo } from 'react-icons/fa';
 import './Footer.scss';
 
 const Footer = () => {
@@ -7,30 +7,36 @@ const Footer = () => {
     <footer id="contact-info" className="app__footer">
       <div className="app__footer-content">
         <div className="app__footer-logo">
-          <img src="/path-to-your-logo.png" alt="Simone Trevisan Logo" />
           <h3>Simone Trevisan</h3>
+          <p>Game Programmer</p>
         </div>
+        
         <div className="app__footer-links">
           <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a href="#about-me">Chi Sono</a>
+          <a href="#skills">Competenze</a>
+          <a href="#portfolio">Progetti</a>
+          <a href="#contact-info">Contatti</a>
         </div>
+        
         <div className="app__footer-social">
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/simone-trevisan-gamedev" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub />
           </a>
-          <a href="mailto:your.email@example.com">
+          <a href="https://yourusername.itch.io" target="_blank" rel="noopener noreferrer" title="Itch.io">
+            <FaItchIo />
+          </a>
+          <a href="mailto:simone.trevisan.gamedev@gmail.com" title="Email">
             <FaEnvelope />
           </a>
         </div>
       </div>
+      
       <div className="app__footer-copyright">
-        <p>&copy; 2024 Simone Trevisan. All rights reserved.</p>
+        <p>&copy; 2025 Simone Trevisan. All rights reserved.</p>
       </div>
     </footer>
   );

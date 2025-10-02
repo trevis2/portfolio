@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import { Navbar } from './components';
-import { Home, About, Skills, Ratings, Portfolio, Footer } from './features';
+import { Home, About, Skills, Portfolio, Experience, Footer } from './features';
 import { WorkInProgressPage } from './pages';
-import Companies from './features/Companies/Companies';
 
 function App() {
   const [isWorkInProgress, setIsWorkInProgress] = useState(true);
@@ -13,8 +12,7 @@ function App() {
     console.log('process.env.REACT_APP_WORK_IN_PROGRESS', process.env.REACT_APP_WORK_IN_PROGRESS);
 
     if (process.env.NODE_ENV === 'development') {
-      //return process.env.REACT_APP_WORK_IN_PROGRESS === 'true';
-      return false;
+      return false; // Always show in development
     } else if (process.env.NODE_ENV === 'production') {
       return process.env.REACT_APP_WORK_IN_PROGRESS === 'true';
     }
@@ -36,8 +34,7 @@ function App() {
       <About />
       <Skills />
       <Portfolio />
-      <Ratings />
-      <Companies />
+      <Experience />
       <Footer />
     </div>
   );
